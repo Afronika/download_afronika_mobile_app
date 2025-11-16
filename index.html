@@ -48,67 +48,68 @@
     font-size: 16px;
   }
   .logo {
-  width: 180px;                /* Base size for desktop */
-  height: auto;                /* Keep aspect ratio */
-  margin-bottom: 30px;         /* Space below logo */
-  display: block;              /* Centers nicely in container */
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 12px;         /* Optional: gives logo slightly rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.05);      /* Slight zoom on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-/* Make it responsive on smaller screens */
-@media (max-width: 600px) {
-  .logo {
-    width: 140px;
-    margin-bottom: 20px;
+    width: 180px;
+    height: auto;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-}
-
+  .logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  @media (max-width: 600px) {
+    .logo {
+      width: 140px;
+      margin-bottom: 20px;
+    }
+  }
 </style>
 </head>
 <body>
 
 <div class="container">
   <img src="transparent-Photoroom.png" alt="Afronika Logo" class="logo">
+
   <h1>Get Afronika Mobile App To Start Shopping!</h1>
   <p>Shop your favorite Gadget anytime anywhere easily and securely. Download Afronika mobile app now.</p>
 
   <div class="buttons">
-    <a href="https://play.google.com/store/apps/details?id=com.benjamin_pro.afronika_app" class="google-play" target="_blank">
+    <!-- Google Play Button -->
+    <a href="https://play.google.com/store/apps/details?id=com.benjamin_pro.afronika_app" 
+       class="google-play" target="_blank">
       Download on Google Play
     </a>
-    <a href="https://apps.apple.com/app/idYOUR_APP_ID" class="apple-store" target="_blank">
+
+    <!-- Apple Store Button -->
+    <a href="https://apps.apple.com/app/idYOUR_APP_ID" 
+       class="apple-store" target="_blank">
       Download on App Store
     </a>
   </div>
-<div class="features">
-    <div class="feature">📱 Enjoy your one-stop Shopping time with the Afronika mobile app</div>
-  <div class="feature">💡 Enjoy Unlimited experience with Afronika technology – 24/7 customer support</div>
-  <div class="feature">🌐 Discover the New Digital world with Afronika technology</div>
 
-</div
+  <div class="features">
+    <div class="feature">📱 Enjoy your one-stop Shopping time with the Afronika mobile app</div>
+    <div class="feature">💡 Enjoy Unlimited experience with Afronika technology – 24/7 customer support</div>
+    <div class="feature">🌐 Discover the New Digital world with Afronika technology</div>
+  </div>
 </div>
-  <!-- Divider Line -->
+
 <hr class="divider">
-<!-- Footer -->
+
 <footer>
   © 2025 Afronika. All rights reserved.
 </footer>
 
-<!-- Device detection script -->
 <script>
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const isAndroid = /Android/i.test(navigator.userAgent);
 
-  // Hide the irrelevant button
+  // Hide irrelevant platform button
   if (isIOS) document.querySelector(".google-play").style.display = "none";
   if (isAndroid) document.querySelector(".apple-store").style.display = "none";
 </script>
