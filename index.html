@@ -4,58 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script>
-    function openProduct() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const productId = urlParams.get("id");
-
-      if (!productId) {
-        document.body.innerHTML = "Invalid product link.";
-        return;
-      }
-
-      // CUSTOM DEEP LINK (change this to your real in-app scheme)
-      const deepLink = `afronika://product?id=${productId}`;
-
-      // Detect device
-      const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-      const isAndroid = /Android/i.test(navigator.userAgent);
-
-      // App Store URLs
-      const iosStore = "https://apps.apple.com/us/app/afronika/id6751983911";
-      const androidStore = "https://play.google.com/store/apps/details?id=com.benjamin_pro.afronika_app";
-
-      let start = Date.now();
-
-      // Try opening app
-      window.location = deepLink;
-
-      // If app is not installed → fallback to store
-      setTimeout(function () {
-        if (Date.now() - start < 1500) {
-          window.location = isIOS ? iosStore : androidStore;
-        }
-      }, 1200);
-    }
-
-    window.onload = openProduct;
-  </script>
-</head>
-<body>
-</body>
-</html>
-
-
-
-
-
-
-<!-- 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script>
     // Auto-redirect based on device
     window.onload = function () {
       const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -76,4 +24,4 @@
 </head>
 <body>
 </body>
-</html> -->
+</html>
